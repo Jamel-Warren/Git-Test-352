@@ -11,9 +11,18 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("I am thinking of a number between 0 and 100. What is it?");
+            
+
             Random rnd = new Random();
-            int x = rnd.Next(0, 100);
+            Console.WriteLine("give me a Minimum number: ");
+            string tempmin = Console.ReadLine();
+            int min = Convert.ToInt32(tempmin);
+
+            Console.WriteLine("give me a maximum number: ");
+            string tempmax = Console.ReadLine();
+            int max = Convert.ToInt32(tempmax);
+            Console.WriteLine("I am thinking of a number between " + tempmin +" and " + tempmax +". What is it?");
+            int x = rnd.Next(min, max);
             string y = Console.ReadLine();
             int z = Convert.ToInt32(y);
             while (x != z)
